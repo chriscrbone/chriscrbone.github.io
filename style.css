@@ -333,30 +333,35 @@ h3{ font-size: clamp(18px, 2.2vw, 22px); }
 }
 
 /* =========================================================
-   RESUME PAGE ONLY (scoped to .resume-wrap) — new styling
+   RESUME PAGE HOTFIX (scoped to resume-specific classes/ids)
+   Appending this block will not impact index.html
    ========================================================= */
 
-/* container + spacing */
-.resume-wrap{ padding: 28px 0 36px; }
-
-/* top hero block with stronger glow */
-.resume-wrap .resume-hero{
-  display:grid;
+/* --- Header / hero on resume --- */
+.resume-hero,
+.resume-header {
+  position: relative;
+  display: grid;
   grid-template-columns: 1.2fr .8fr;
   gap: 26px;
-  margin-bottom: 18px;
-  padding: 18px;
-  border:1px solid var(--border);
+  padding: 16px;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02));
   box-shadow:
     0 18px 46px rgba(0,0,0,.42),
     0 0 0 1px rgba(157,123,255,.12),
     0 28px 70px rgba(106,163,255,.16);
-  position: relative;
   overflow: hidden;
 }
-.resume-wrap .resume-hero::after{
+@media (max-width: 960px){
+  .resume-hero,
+  .resume-header { grid-template-columns: 1fr; }
+}
+
+/* animated glow that stays behind content */
+.resume-hero::after,
+.resume-header::after {
   content:"";
   position:absolute; right:-140px; top:-140px;
   width:420px; height:420px; border-radius:50%;
@@ -364,51 +369,60 @@ h3{ font-size: clamp(18px, 2.2vw, 22px); }
     radial-gradient(closest-side, rgba(106,163,255,.20), rgba(106,163,255,0) 70%),
     radial-gradient(closest-side, rgba(157,123,255,.18), rgba(157,123,255,0) 75%);
   filter: blur(28px) saturate(120%);
-  pointer-events:none;
+  z-index: 0;
+  pointer-events: none;
 }
+.resume-hero > *,
+.resume-header > * { position: relative; z-index: 1; }
 
-/* left side text */
-.resume-wrap .resume-hero-left .hero-title{ margin: 2px 0 4px; font-size: clamp(30px, 3.8vw, 44px); }
-.resume-wrap .resume-hero-left .hero-subtitle{ color: var(--muted); margin-bottom: 8px; font-weight: 600; }
+/* --- Buttons + links row under name --- */
+.resume-actions { display:flex; gap:10px; flex-wrap: wrap; margin: 8px 0; }
+.resume-links   { color: var(--muted); }
+.resume-links a { color: var(--text); opacity:.92; }
+.resume-links a:hover { opacity:1; }
 
-.resume-wrap .resume-actions{ display:flex; gap:10px; margin: 10px 0 8px; }
-.resume-wrap .hero-links{ color: var(--muted); }
-.resume-wrap .hero-links a{ color: var(--text); opacity:.92; }
-.resume-wrap .hero-links a:hover{ opacity:1; }
-
-/* right side highlight card */
-.resume-wrap .resume-hero-right{
-  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-  border:1px solid var(--border);
-  border-radius: var(--radius);
-  padding:16px;
-  box-shadow: var(--shadow);
-}
-.resume-wrap .resume-hero-right .kicker{
-  font-size:.88rem; color:#b3c0d6; margin-bottom:.35rem;
-}
-.resume-wrap .resume-hero-right .list-bullets{
-  padding-left: 18px; margin: 8px 0 0;
-}
-
-/* embedded PDF with rounded frame + glow */
-.resume-wrap .pdf-frame{
+/* --- PDF viewer (object/iframe/embed) --- */
+.pdf-frame,
+.resume-pdf,
+#resume-pdf {
   border:1px solid var(--border);
   border-radius: var(--radius);
   overflow:hidden;
   background: #0f1422;
   box-shadow: 0 16px 44px rgba(0,0,0,.38), 0 0 0 1px rgba(106,163,255,.14);
 }
-.resume-wrap .pdf-frame iframe{
-  display:block; width:100%; height:72vh; border:0;
+
+/* Ensure the embedded PDF gets a real height */
+.pdf-frame iframe,
+.pdf-frame object,
+.pdf-frame embed,
+.resume-pdf iframe,
+.resume-pdf object,
+.resume-pdf embed,
+#resume-pdf iframe,
+#resume-pdf object,
+#resume-pdf embed {
+  display:block;
+  width:100%;
+  height: 74vh;            /* main fix: give it height */
+  min-height: 540px;       /* fallback on shorter screens */
+  border:0;
 }
 
-/* education + skills cards within resume */
-.resume-wrap .card .card-title{ margin:.2rem 0 1rem; }
+/* --- Education / cards on resume --- */
+.resume-card,
+.resume .card {
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
 
-/* education logo presentation (UNH) */
-.resume-wrap .logo--unh-lg{
-  max-height: 44px; width:auto;
+/* --- Logo tuning on resume --- */
+.resume img.logo--unh-lg,
+img.logo--unh-lg {
+  max-height: 44px;
+  width: auto;
   background:#0e1526;
   border:1px solid var(--border);
   border-radius:12px;
@@ -417,14 +431,16 @@ h3{ font-size: clamp(18px, 2.2vw, 22px); }
   filter: grayscale(0.05) contrast(1.08) opacity(.98);
 }
 
-/* Farrell Fritz logo in resume cards */
-.resume-wrap .logo--ff{
+.resume img.logo--ff,
+img.logo--ff {
   max-height: 36px;
+  width: auto;
   filter: grayscale(0.1) brightness(1.12) contrast(1.12) opacity(.98);
 }
 
-/* experience cards on resume (subtle extra glow) */
-.resume-wrap .xp-card{
+/* --- Experience cards on resume --- */
+.resume .xp-card,
+.xp-card {
   background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
   border:1px solid var(--border);
   border-radius: var(--radius);
@@ -432,13 +448,8 @@ h3{ font-size: clamp(18px, 2.2vw, 22px); }
   box-shadow: 0 16px 42px rgba(0,0,0,.36), 0 0 0 1px rgba(157,123,255,.10);
   margin: 14px 0;
 }
-.resume-wrap .xp-card .xp-header{
-  display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:8px;
-}
-.resume-wrap .xp-card .xp-logo{ height: 36px; width:auto; object-fit:contain; }
+.xp-card .xp-header { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:8px; }
+.xp-card .xp-logo { height: 36px; width:auto; object-fit:contain; }
 
-/* responsive tweaks for resume only */
-@media (max-width: 960px){
-  .resume-wrap .resume-hero{ grid-template-columns: 1fr; }
-  .resume-wrap .pdf-frame iframe{ height: 64vh; }
-}
+/* --- Core skills chips on resume --- */
+.resume .tags span { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); }
