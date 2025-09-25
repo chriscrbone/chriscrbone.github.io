@@ -1,155 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resume — Christopher Carbone</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Resume for Christopher Carbone — Cybersecurity & Systems Administrator">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Resume • Christopher Carbone</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-wrap">
-      <a class="brand" href="index.html" aria-label="Home">
-        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.08"/>
-          <path d="M6 12h12M12 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <span class="brand-text">Carbone <span class="brand-hq">HQ</span></span>
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span>Carbone</span><span class="brand-hq">HQ</span><span class="brand-dot">.com</span>
       </a>
-      <nav class="nav">
+      <nav class="nav-links">
         <a href="index.html#about">About</a>
         <a href="index.html#experience">Experience</a>
         <a href="index.html#projects">Projects</a>
         <a href="index.html#skills">Skills</a>
-        <a href="#top">Resume</a>
-        <a href="index.html#contact">Contact</a>
+        <a class="active" href="resume.html">Resume</a>
       </nav>
     </div>
   </header>
 
-  <main class="section">
-    <div class="container">
-      <h1 class="reveal">Resume</h1>
-
-      <section class="card reveal" style="margin-top:12px">
-        <h2>Summary</h2>
-        <p>Cybersecurity & Systems Administrator with hands-on experience across Windows Server, AD/GPO, Microsoft 365, and endpoint security. Strong lab focus and practical automation with PowerShell/Python.</p>
-        <p style="margin-top:8px">
-          <a class="btn primary" href="assets/documents/Christopher_Carbone_Resume.pdf" target="_blank" rel="noreferrer">
-            Download Resume (PDF)
-          </a>
+  <main class="container resume-wrap">
+    <!-- Header -->
+    <section class="resume-hero card card-glow-strong">
+      <div class="resume-hero-left">
+        <h1 class="hero-title tight">Christopher Carbone</h1>
+        <p class="hero-subtitle">Cybersecurity &amp; Systems Administrator • University of New Haven</p>
+        <div class="resume-actions">
+          <a class="btn btn-primary" href="assets/documents/christopher_carbone_resume.pdf" target="_blank" rel="noopener">Open PDF</a>
+          <a class="btn" href="assets/documents/christopher_carbone_resume.pdf" download>Download PDF</a>
+          <a class="btn" href="index.html#experience">View Experience</a>
+        </div>
+        <p class="hero-links">
+          <a href="mailto:christopher@carbonehq.com">christopher@carbonehq.com</a> ·
+          <a href="https://www.linkedin.com/in/christopher-carbone-333439245/" target="_blank" rel="noopener">LinkedIn</a> ·
+          <a href="https://newhaven.joinhandshake.com/profiles/carbone" target="_blank" rel="noopener">Handshake</a> ·
+          <a href="https://github.com/chriscrbone" target="_blank" rel="noopener">GitHub</a>
         </p>
-      </section>
+      </div>
 
-      <section class="grid-2" style="margin-top:16px">
-        <div class="card list reveal">
-          <h2>Education</h2>
-          <div class="edu-flex">
-            <img class="logo logo--unh-lg" src="assets/logos/unewhaven.png" alt="University of New Haven logo" loading="lazy" />
-            <div class="edu-text">
-              <a class="org" href="https://www.newhaven.edu/index.php" target="_blank" rel="noopener noreferrer">
-                <strong>University of New Haven</strong>
-              </a>
-              <div class="edu-degree">B.S. Cybersecurity & Networks (Expected 2026)</div>
-            </div>
+      <aside class="resume-hero-right">
+        <div class="kicker">Highlights</div>
+        <ul class="list-bullets">
+          <li>CTF@CIT 2024 — 11th of 553 teams</li>
+          <li>Capstone: Fortinet SOC test environment (in progress)</li>
+          <li>Windows Server 2008–2022 • AD • GPO • M365</li>
+          <li>Nessus • SentinelOne • Duo • Wireshark</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- Embedded PDF -->
+    <section class="card card-glow">
+      <div class="pdf-frame">
+        <iframe
+          title="Resume PDF"
+          src="assets/documents/christopher_carbone_resume.pdf#view=FitH"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Education + Skills -->
+    <section class="grid-two resume-section">
+      <div class="card">
+        <h3 class="card-title">Education</h3>
+        <div class="edu-row">
+          <img class="edu-logo-img" src="assets/logos/unewhaven.png" alt="University of New Haven logo"/>
+          <div>
+            <div class="edu-school">University of New Haven</div>
+            <div class="edu-degree">B.S. Cybersecurity &amp; Networks (Expected 2026)</div>
           </div>
-          <ul class="edu-bullets">
-            <li>Dean’s List (four consecutive semesters)</li>
-            <li>CTF@CIT 2024 — 11th of 553 teams</li>
-            <li>Capstone (in progress): Fortinet SOC test environment</li>
-          </ul>
         </div>
+        <ul class="list-bullets">
+          <li>Dean’s List (four consecutive semesters)</li>
+          <li>Capstone (in progress): Fortinet SOC test environment</li>
+        </ul>
+      </div>
 
-        <div class="card list reveal">
-          <h2>Technical Skills</h2>
-          <ul>
-            <li><strong>Platforms:</strong> Windows Server 2008–2022; Linux (Debian, CentOS)</li>
-            <li><strong>Security:</strong> Nessus, SentinelOne, Duo, Wireshark, FTK Imager, Autopsy, Volatility</li>
-            <li><strong>Administration:</strong> Active Directory, Group Policy, Microsoft 365/Exchange Online, VMware vSphere</li>
-            <li><strong>Tools:</strong> Nmap, Metasploit, Hashcat, SSMS</li>
-            <li><strong>Scripting:</strong> PowerShell, Python, SQL, Java, C/C++</li>
-          </ul>
+      <div class="card">
+        <h3 class="card-title">Core Skills</h3>
+        <div class="tags">
+          <span>AD / GPO</span><span>Windows Server 2008–2022</span><span>PowerShell</span>
+          <span>SentinelOne</span><span>Nessus</span><span>Duo MFA</span>
+          <span>Microsoft 365 / Exchange Online</span><span>VMware vSphere</span>
+          <span>Wireshark</span><span>Python</span>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="reveal" style="margin-top:16px">
-        <h2>Experience</h2>
-        <div class="timeline">
-          <article class="t-card">
-            <header class="exp-head">
-              <a class="org org--logo" href="https://www.farrellfritz.com/" target="_blank" rel="noopener noreferrer" aria-label="Farrell Fritz, P.C.">
-                <img class="logo logo--ff" src="assets/logos/farrellfritz.svg" alt="Farrell Fritz logo" loading="lazy" />
-              </a>
-              <span class="meta">Aug 2025 – Present</span>
-            </header>
-            <h3>Cybersecurity & Systems Administrator</h3>
-            <ul>
-              <li>Remediated high-severity vulnerabilities (CVSS ≥ 7.0) across servers and endpoints</li>
-              <li>Hardened permissions/access; expanded MFA coverage</li>
-              <li>AD/GPO admin; Windows Server VM builds; legacy app migrations</li>
-              <li>EDR monitoring and investigation (SentinelOne)</li>
-              <li>Automated patching/logging/config with PowerShell/Python</li>
-            </ul>
-          </article>
+    <!-- Experience -->
+    <section class="resume-section">
+      <h2>Experience</h2>
 
-          <article class="t-card">
-            <header class="exp-head">
-              <a class="org org--logo" href="https://www.farrellfritz.com/" target="_blank" rel="noopener noreferrer" aria-label="Farrell Fritz, P.C.">
-                <img class="logo logo--ff" src="assets/logos/farrellfritz.svg" alt="Farrell Fritz logo" loading="lazy" />
-              </a>
-              <span class="meta">May 2025 – Aug 2025</span>
-            </header>
-            <h3>Cybersecurity Intern</h3>
-            <ul>
-              <li>IR support and basic forensics on compromised endpoints</li>
-              <li>Nessus remediations during maintenance windows</li>
-              <li>Investigated anomalies in TrueDigital Stellar</li>
-            </ul>
-          </article>
-
-          <article class="t-card">
-            <header class="exp-head">
-              <a class="org org--logo" href="https://www.farrellfritz.com/" target="_blank" rel="noopener noreferrer" aria-label="Farrell Fritz, P.C.">
-                <img class="logo logo--ff" src="assets/logos/farrellfritz.svg" alt="Farrell Fritz logo" loading="lazy" />
-              </a>
-              <span class="meta">Jul 2023 – Jan 2025</span>
-            </header>
-            <h3>Help Desk & Systems Administration Intern</h3>
-            <ul>
-              <li>Provisioned AD accounts; imaged/deployed endpoints; supported 175+ users</li>
-              <li>Restored docs in iManage via SSMS; managed print servers/queues</li>
-              <li>Built PowerShell utilities to speed ticket handling</li>
-              <li>Migrated Servers Alive to Windows Server with near-zero downtime</li>
-            </ul>
-          </article>
+      <article class="xp-card xp-glow">
+        <div class="xp-header">
+          <img class="xp-logo fixed" src="assets/logos/farrellfritz.svg" alt="Farrell Fritz">
+          <div class="xp-meta">
+            <div class="xp-role">Cybersecurity &amp; Systems Administrator</div>
+            <div class="xp-dates">Aug 2025 – Present</div>
+          </div>
         </div>
-      </section>
+        <ul class="list-bullets">
+          <li>Remediated high-severity vulnerabilities across servers and endpoints</li>
+          <li>Hardened permissions and access; expanded MFA coverage</li>
+          <li>AD/GPO administration; Windows Server builds; legacy app migrations</li>
+          <li>EDR monitoring and investigation (SentinelOne)</li>
+          <li>Automated patching/logging/config with PowerShell and Python</li>
+        </ul>
+      </article>
 
-      <section class="card reveal" style="margin-top:16px">
-        <h2>Contact</h2>
-        <p><a href="mailto:christopher@carbonehq.com">christopher@carbonehq.com</a> · <a href="mailto:ccarb4@unh.newhaven.edu">ccarb4@unh.newhaven.edu</a></p>
-        <p><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/christopher-carbone-333439245/">LinkedIn</a> · <a target="_blank" rel="noreferrer" href="https://newhaven.joinhandshake.com/profiles/carbone">Handshake</a> · <a target="_blank" rel="noreferrer" href="https://github.com/chriscrbone">GitHub</a></p>
-        <p class="fine">Logos are trademarks of their respective owners; links provided for reference.</p>
-      </section>
-    </div>
+      <article class="xp-card xp-glow">
+        <div class="xp-header">
+          <img class="xp-logo fixed" src="assets/logos/farrellfritz.svg" alt="Farrell Fritz">
+          <div class="xp-meta">
+            <div class="xp-role">Cybersecurity Intern</div>
+            <div class="xp-dates">May 2025 – Aug 2025</div>
+          </div>
+        </div>
+        <ul class="list-bullets">
+          <li>IR support and forensics on compromised endpoints</li>
+          <li>Prioritized Nessus remediations during maintenance windows</li>
+          <li>Investigated anomalies in TrueDigital Stellar with system owners</li>
+        </ul>
+      </article>
+
+      <article class="xp-card xp-glow">
+        <div class="xp-header">
+          <img class="xp-logo fixed" src="assets/logos/farrellfritz.svg" alt="Farrell Fritz">
+          <div class="xp-meta">
+            <div class="xp-role">Help Desk &amp; Systems Administration Intern</div>
+            <div class="xp-dates">Jul 2023 – Jan 2025</div>
+          </div>
+        </div>
+        <ul class="list-bullets">
+          <li>Provisioned AD accounts; imaged/deployed endpoints; supported 175+ users</li>
+          <li>iManage restorations via SSMS; managed print queues</li>
+          <li>PowerShell utilities to reduce ticket handling time</li>
+          <li>Migrated Servers Alive to Windows Server with near-zero downtime</li>
+        </ul>
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Christopher Carbone</p>
+    <div class="container footer-grid">
+      <div>
+        <h3>Contact</h3>
+        <ul class="contact-list">
+          <li><a href="mailto:christopher@carbonehq.com">christopher@carbonehq.com</a></li>
+          <li><a href="https://www.linkedin.com/in/christopher-carbone-333439245/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://newhaven.joinhandshake.com/profiles/carbone" target="_blank" rel="noopener">Handshake</a></li>
+          <li><a href="https://github.com/chriscrbone" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+        <p class="legal">Logos are trademarks of their respective owners; links provided for reference.</p>
+      </div>
+      <aside class="availability card">
+        <h3>Availability</h3>
+        <p>Open to internships and part-time roles in security or systems.</p>
+        <a class="btn btn-primary" href="mailto:christopher@carbonehq.com">Email me</a>
+      </aside>
     </div>
   </footer>
-
-  <script>
-    const els = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-      for (const e of entries) {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      }
-    }, { threshold: 0.15 });
-    els.forEach(el => io.observe(el));
-  </script>
 </body>
 </html>
-
