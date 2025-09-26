@@ -5,13 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — Christopher Carbone</title>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="About Christopher Carbone — Cybersecurity & Systems Administrator and B.S. Cybersecurity & Networks student at the University of New Haven.">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <nav class="navbar container">
       <a class="brand" href="index.html" aria-label="CarboneHQ home">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="10" class="mark-ring"/><path d="M12 7v10M7 12h10" class="mark-plus"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18">
+            <circle cx="12" cy="12" r="10" class="mark-ring"/>
+            <path d="M12 7v10M7 12h10" class="mark-plus"/>
+          </svg>
         </span>
         <span class="brand-text">Carbone <strong class="hq">HQ</strong></span>
       </a>
@@ -27,58 +32,140 @@
     </nav>
   </header>
 
+  <!-- Main -->
   <main class="container" style="padding:34px 0 40px">
+    <!-- About Me -->
     <section class="panel">
       <h1>About</h1>
       <p>
         I’m a Cybersecurity &amp; Systems Administrator at Farrell Fritz, P.C. and a B.S. Cybersecurity &amp; Networks student at the University of New Haven (’26, Dean’s List ×4).
-        I focus on hardening, identity and access, patch/vuln remediation, and incident response with repeatable runbooks.
+        I focus on hardening, identity &amp; access, vulnerability remediation, and incident response with clean, repeatable runbooks.
       </p>
       <p>
-        Experience includes remediating CVSS ≥7 findings across Windows and Linux, expanding MFA, building Windows Server VMs, migrating legacy apps, and investigating threats with SentinelOne.
-        I script in PowerShell and Python to reduce toil and document clean fixes.
+        Recent work: remediating CVSS ≥7 findings across Windows/Linux, expanding MFA, building Windows Server VMs,
+        migrating legacy apps, and investigating threats with SentinelOne. I script in PowerShell and Python to cut toil and document fixes.
       </p>
     </section>
 
+    <!-- Education (Bubble UI matching Projects) -->
     <section id="education" class="panel" style="margin-top:18px">
       <h2>Education</h2>
-      <div class="edu-card">
+      <div class="edu-header">
         <div class="edu-title">University of New Haven</div>
         <div class="edu-sub">B.S. Cybersecurity &amp; Networks (Expected 2026)</div>
-        <ul class="edu-points">
-          <li>Dean’s List (four consecutive semesters)</li>
-          <li>Capstone (in progress): Fortinet SOC test environment</li>
-        </ul>
+      </div>
+
+      <p style="color:#c7ccd6;margin:.4rem 0 1rem">Click a bubble to view courses. Click again to collapse.</p>
+
+      <div class="bubble-grid bubble-grid-edu">
+        <!-- Core Cybersecurity & Networking -->
+        <article class="project-bubble edu-bubble" tabindex="0" aria-expanded="false">
+          <h3 class="bubble-title">Core Cybersecurity &amp; Networking</h3>
+          <div class="bubble-body">
+            <ul class="bubble-points">
+              <li>CSCI-2246 – Introduction to Computer Security</li>
+              <li>CSCI-3338 – Introduction to Cyber Forensic Science</li>
+              <li>CSCI-3347 – Network Technologies</li>
+              <li>CSCI-4445 – Unix Network Administration</li>
+              <li>CSCI-4439 – Windows Network Administration</li>
+              <li>CSCI-4482 – Wireless Networks</li>
+              <li>CSCI-4449 – Ethical Hacking</li>
+              <li>CSYS-4483 – Network Defense</li>
+              <li>CSYS-4497 – Capstone Network Analysis &amp; Design <em>(in progress)</em></li>
+              <li>CSYS-4498 / CSCI-4498 – Capstone Network Project or Capstone Software Project II <em>(still needed)</em></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- CS & Programming -->
+        <article class="project-bubble edu-bubble" tabindex="0" aria-expanded="false">
+          <h3 class="bubble-title">CS &amp; Programming</h3>
+          <div class="bubble-body">
+            <ul class="bubble-points">
+              <li>CSCI-1109 – Introduction to Computing</li>
+              <li>CSCI-1110 – Introduction to C Programming</li>
+              <li>CSCI-2212 – Intermediate Programming in C/C++</li>
+              <li>CSCI-2210 – Java Programming</li>
+              <li>CSCI-2215 – Databases and SQL</li>
+              <li>CSCI-3320 – Operating Systems</li>
+              <li>CSCI-3351 – Script Programming / Python</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Digital Systems & Hardware -->
+        <article class="project-bubble edu-bubble" tabindex="0" aria-expanded="false">
+          <h3 class="bubble-title">Digital Systems &amp; Hardware</h3>
+          <div class="bubble-body">
+            <ul class="bubble-points">
+              <li>ELEC-1155 – Digital Systems: Logic Design</li>
+              <li>ELEC-3330 – Digital Systems: Computer Organization</li>
+              <li>CSCI-3331 – Computer Organization Lab</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Specialized Electives -->
+        <article class="project-bubble edu-bubble" tabindex="0" aria-expanded="false">
+          <h3 class="bubble-title">Specialized Electives</h3>
+          <div class="bubble-body">
+            <ul class="bubble-points">
+              <li>CSCI-4438 – Small-Scale Digital Forensic Science</li>
+              <li>EASC-1125 – Societal Issues in the Cyberworld</li>
+              <li>CSCI-3316 – Professional Issues in Computing Technology</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Math & Supporting Skills -->
+        <article class="project-bubble edu-bubble" tabindex="0" aria-expanded="false">
+          <h3 class="bubble-title">Math &amp; Supporting Skills</h3>
+          <div class="bubble-body">
+            <ul class="bubble-points">
+              <li>MATH-1166 – Discrete Mathematics for Computing</li>
+              <li>MATH-2228 – Elementary Statistics <em>(in progress)</em></li>
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
 
+    <!-- Awards / Highlights -->
     <section class="panel" style="margin-top:18px">
       <h2>Awards &amp; Highlights</h2>
       <ul class="edu-points" style="margin-top:.4rem">
+        <li>Dean’s List (four consecutive semesters)</li>
         <li>CTF@CIT 2024 — 11th of 553 teams</li>
       </ul>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
         <div class="brand compact">
           <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="10" class="mark-ring"/><path d="M12 7v10M7 12h10" class="mark-plus"/></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16">
+              <circle cx="12" cy="12" r="10" class="mark-ring"/>
+              <path d="M12 7v10M7 12h10" class="mark-plus"/>
+            </svg>
           </span>
           <span class="brand-text">Carbone <strong class="hq">HQ</strong></span>
         </div>
         <p class="foot-copy">© <span id="year"></span> Christopher N. Carbone.</p>
       </div>
+
       <div>
         <h3>Contact</h3>
         <ul class="foot-links">
           <li><a href="mailto:christopher@carbonehq.com">christopher@carbonehq.com</a></li>
           <li><a href="mailto:Christopher@carbonehq.com">Request resume</a></li>
           <li><a href="https://linkedin.com/in/christopher-carbone-333439245" target="_blank" rel="noreferrer">LinkedIn</a></li>
+          <li><a href="https://newhaven.joinhandshake.com/profiles/carbone" target="_blank" rel="noreferrer">Handshake</a></li>
         </ul>
       </div>
+
       <div>
         <h3>Site</h3>
         <ul class="foot-links">
