@@ -1,386 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Christopher Carbone — Cybersecurity & Systems Administrator</title>
-  <meta name="description" content="Christopher Carbone — cybersecurity & networks portfolio, labs, projects, and resume." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Portfolio of Christopher Carbone — Cybersecurity & Systems Administrator and B.S. Cybersecurity & Networks student at the University of New Haven.">
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-wrap">
-      <a class="brand" href="index.html" aria-label="Home">
-        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.08"/>
-          <path d="M6 12h12M12 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <span class="brand-text">Carbone <span class="brand-hq">HQ</span></span>
+  <!-- Global Header -->
+  <header>
+    <nav class="navbar container">
+      <a class="brand" href="index.html" aria-label="CarboneHQ home">
+        <!-- Simple SVG badge with plus icon -->
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" role="img">
+            <circle cx="12" cy="12" r="10" class="mark-ring"/>
+            <path d="M12 7v10M7 12h10" class="mark-plus"/>
+          </svg>
+        </span>
+        <span class="brand-text">Carbone <strong class="hq">HQ</strong></span>
       </a>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="resume.html">Resume</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Hero -->
-  <section id="top" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy reveal">
-        <h1>Christopher Carbone</h1>
-        <p class="subtitle">Cybersecurity & Systems Administrator · B.S. Cybersecurity & Networks (’26)</p>
-        <p class="lede">
-          I build, harden, and support Windows and Linux in real environments, then document clean fixes.
+  <main>
+    <section class="hero container">
+      <div class="hero-left">
+        <h1 class="hero-title">Christopher Carbone</h1>
+        <p class="hero-sub">
+          Cybersecurity &amp; Systems Administrator · B.S. Cybersecurity &amp; Networks (’26)
         </p>
-        <div class="cta">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn ghost" href="resume.html">View Resume</a>
+        <p class="hero-lead">
+          You build, harden, and support Windows and Linux in live environments.
+          You document clean fixes, reduce risk, and automate repeat work.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="projects.html">View Projects</a>
+          <a class="btn" href="experience.html">View Experience</a>
+          <a class="btn ghost" href="mailto:Christopher@carbonehq.com">Request Resume</a>
         </div>
-        <div class="links">
-          <a href="mailto:christopher@carbonehq.com">christopher@carbonehq.com</a> ·
-          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/christopher-carbone-333439245/">LinkedIn</a> ·
-          <a target="_blank" rel="noreferrer" href="https://newhaven.joinhandshake.com/profiles/carbone">Handshake</a> ·
-          <a target="_blank" rel="noreferrer" href="https://github.com/chriscrbone">GitHub</a>
-        </div>
+
+        <p class="hero-links">
+          <a href="mailto:christopher@carbonehq.com">christopher@carbonehq.com</a>
+          <span class="dot">·</span>
+          <a href="https://linkedin.com/in/christopher-carbone-333439245" target="_blank" rel="noreferrer">LinkedIn</a>
+          <span class="dot">·</span>
+          <a href="contact.html">Contact</a>
+        </p>
       </div>
 
-      <aside class="hero-card reveal" aria-label="Highlights">
-        <div class="profile-card">
-          <div class="chip">Highlights</div>
-          <ul>
-            <li>CTF@CIT 2024: 11th of 553 teams</li>
-            <li>Capstone: Fortinet SOC test environment (in progress)</li>
-            <li>Windows Server 2008–2022 · AD · GPO · M365</li>
-            <li>Nessus · SentinelOne · Duo · Wireshark</li>
-          </ul>
-        </div>
+      <!-- Highlights card -->
+      <aside class="hero-card">
+        <div class="pill">Highlights</div>
+        <ul class="card-list">
+          <li><strong>CTF@CIT 2024:</strong> 11th of 553 teams</li>
+          <li><strong>Capstone:</strong> Fortinet SOC test environment (in progress)</li>
+          <li><strong>Windows Server 2008–2022:</strong> AD · GPO · M365</li>
+          <li><strong>Security Stack:</strong> Nessus · SentinelOne · Duo · Wireshark</li>
+          <li><strong>Scripting:</strong> PowerShell · Python · SQL</li>
+        </ul>
       </aside>
+    </section>
 
-      <div class="hero-bg" aria-hidden="true"></div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container grid-2">
-      <div class="reveal">
+    <!-- About preview section (more detail on home) -->
+    <section class="home-split container">
+      <div class="panel">
         <h2>About</h2>
         <p>
-          I’m Christopher, a Cybersecurity and Networks student at the University of New Haven, where I’ve made the Dean’s List four times consecutively.
-          I currently work as the Cybersecurity & Systems Administrator at Farrell Fritz, P.C., a New York law firm, where I manage IT infrastructure,
-          strengthen system security, patch vulnerabilities, and support risk mitigation in a live business environment. Before this role, I was a
-          Cybersecurity Intern, and a Systems Administration Intern at the same firm.
+          I’m a Cybersecurity &amp; Networks student at the University of New Haven (Dean’s List ×4) and
+          a Cybersecurity &amp; Systems Administrator at Farrell Fritz, P.C. I focus on patching, hardening,
+          identity and access, and incident response with clean, repeatable runbooks.
         </p>
         <p>
-          I’m very comfortable working in Linux environments and have hands-on experience with tools commonly used in penetration testing and ethical
-          hacking scenarios. In 2024, my team placed 11th out of 553 teams nationwide in the CIT@CTF cybersecurity competition, and I am excited to
-          participate in similar competitions as I progress in my studies.
+          Recent work: remediating CVSS ≥7 findings across servers/endpoints, expanding MFA coverage,
+          building Windows Server VMs, migrating legacy apps, and investigating threats with SentinelOne.
         </p>
-        <p>
-          I’m looking to apply my skills in professional cybersecurity environments, particularly in red or purple team roles, and I’m always open to
-          connecting with others in the field.
-        </p>
+        <a class="link-arrow" href="about.html">Read more →</a>
       </div>
 
-      <div class="card list reveal">
-        <h3>Education</h3>
-        <div class="edu-flex">
-          <img class="logo logo--unh-lg" src="assets/logos/unewhaven.png" alt="University of New Haven logo" loading="lazy" />
-          <div class="edu-text">
-            <a class="org" href="https://www.newhaven.edu/index.php" target="_blank" rel="noopener noreferrer">
-              <strong>University of New Haven</strong>
-            </a>
-            <div class="edu-degree">B.S. Cybersecurity & Networks (Expected 2026)</div>
-          </div>
+      <div class="panel">
+        <h2>Education</h2>
+        <div class="edu-card">
+          <div class="edu-title">University of New Haven</div>
+          <div class="edu-sub">B.S. Cybersecurity &amp; Networks (Expected 2026)</div>
+          <ul class="edu-points">
+            <li>Dean’s List (four consecutive semesters)</li>
+            <li>Capstone (in progress): Fortinet SOC test environment</li>
+          </ul>
         </div>
-        <ul class="edu-bullets">
-          <li>Dean’s List (four consecutive semesters)</li>
-          <li>Capstone (in progress): Fortinet SOC test environment</li>
-        </ul>
+        <a class="link-arrow" href="about.html#education">See education →</a>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Experience -->
-  <section id="experience" class="section alt">
-    <div class="container">
-      <h2 class="reveal">Experience</h2>
-
-      <div class="timeline">
-        <article class="t-card reveal">
-          <header class="exp-head">
-            <a class="org org--logo" href="https://www.farrellfritz.com/" target="_blank" rel="noopener noreferrer" aria-label="Farrell Fritz, P.C.">
-              <img class="logo logo--ff" src="assets/logos/farrellfritz.svg" alt="Farrell Fritz logo" loading="lazy" />
-            </a>
-            <span class="meta">Aug 2025 – Present</span>
-          </header>
-          <h3>Cybersecurity & Systems Administrator</h3>
-          <ul>
-            <li>Remediated high-severity vulnerabilities across servers and endpoints</li>
-            <li>Hardened permissions and access; expanded MFA coverage</li>
-            <li>AD/GPO administration; Windows Server builds; legacy app migrations</li>
-            <li>EDR monitoring and investigation (SentinelOne)</li>
-            <li>Automated patching/logging/config with PowerShell and Python</li>
-          </ul>
-        </article>
-
-        <article class="t-card reveal">
-          <header class="exp-head">
-            <a class="org org--logo" href="https://www.farrellfritz.com/" target="_blank" rel="noopener noreferrer" aria-label="Farrell Fritz, P.C.">
-              <img class="logo logo--ff" src="assets/logos/farrellfritz.svg" alt="Farrell Fritz logo" loading="lazy" />
-            </a>
-            <span class="meta">May 2025 – Aug 2025</span>
-          </header>
-          <h3>Cybersecurity Intern</h3>
-          <ul>
-            <li>IR support and basic forensics on compromised endpoints</li>
-            <li>Applied prioritized Nessus remediations during maintenance windows</li>
-            <li>Investigated anomalies in TrueDigital Stellar with system owners</li>
-          </ul>
-        </article>
-
-        <article class="t-card reveal">
-          <header class="exp-head">
-            <a class="org org--logo" href="https://www.farrellfritz.com/" target="_blank" rel="noopener noreferrer" aria-label="Farrell Fritz, P.C.">
-              <img class="logo logo--ff" src="assets/logos/farrellfritz.svg" alt="Farrell Fritz logo" loading="lazy" />
-            </a>
-            <span class="meta">Jul 2023 – Jan 2025</span>
-          </header>
-          <h3>Help Desk & Systems Administration Intern</h3>
-          <ul>
-            <li>Provisioned AD accounts; imaged/deployed endpoints; supported 175+ users</li>
-            <li>iManage restorations via SSMS; managed print queues</li>
-            <li>PowerShell utilities to reduce ticket handling time</li>
-            <li>Migrated Servers Alive to Windows Server with near-zero downtime</li>
-          </ul>
-        </article>
-      </div>
-
-      <p class="fine">Logos are trademarks of their respective owners; links provided for reference.</p>
-    </div>
-  </section>
-
-  <!-- Projects (expandable cards) -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="reveal">Projects</h2>
-      <div class="expando-grid">
-        <article class="expando-card reveal" data-expando>
-          <header class="expando-head">
-            <h3>Fortinet SOC Test Environment</h3>
-            <button class="expando-toggle" aria-label="Toggle details"></button>
-          </header>
-          <div class="expando-body">
-            <p>Lab simulating traffic, events, and threats for detection/response training. Focus on alert fidelity, noise reduction, and triage speed.</p>
-            <div class="tags"><span>Fortinet</span><span>Blue Team</span><span>IR</span></div>
-          </div>
-        </article>
-
-        <article class="expando-card reveal" data-expando>
-          <header class="expando-head">
-            <h3>Exploit Lab VMs</h3>
-            <button class="expando-toggle" aria-label="Toggle details"></button>
-          </header>
-          <div class="expando-body">
-            <p>Created Vulnerable Linux/Windows VMs in a lab sandbox environment (Struts2 RCE, PwnKit, Dirty COW).</p>
-            <div class="tags"><span>Linux</span><span>Windows</span><span>Exploit</span></div>
-          </div>
-        </article>
-
-        <article class="expando-card reveal" data-expando>
-          <header class="expando-head">
-            <h3>PowerShell Ops Toolkit</h3>
-            <button class="expando-toggle" aria-label="Toggle details"></button>
-          </header>
-          <div class="expando-body">
-            <p>Small utilities for checks, patch prep, and log parsing.</p>
-            <div class="tags"><span>PowerShell</span><span>Automation</span><span>Ops</span></div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Labs (expandable cards) -->
-  <section id="labs" class="section alt">
-    <div class="container">
-      <h2 class="reveal">Labs</h2>
-      <div class="expando-grid">
-        <article class="expando-card reveal" data-expando>
-          <header class="expando-head">
-            <h3>Fortinet SOC Test Environment</h3>
-            <button class="expando-toggle" aria-label="Toggle details"></button>
-          </header>
-          <div class="expando-body">
-            <p>
-              Our capstone project focuses on designing and implementing a test environment to evaluate a Fortinet Security Operations Center (SOC) for the University of New Haven. 
-              The project will provide a controlled environment to simulate real-world network traffic, security events, and threats, thus enabling the configuration and testing of Fortinet security tools. 
-              By integrating monitoring, detection, and response capabilities, the SOC will serve as both a research and educational resource for students and faculty. 
-              This initiative aims to strengthen the university’s cybersecurity infrastructure while giving students hands-on experience in managing enterprise-grade security solutions.
-            </p>
-            <div class="tags"><span>Fortinet</span><span>SIEM/SOAR</span></div>
-          </div>
-        </article>
-
-        <article class="expando-card reveal" data-expando>
-          <header class="expando-head">
-            <h3>Apache Struts2 RCE (CVE-2017-5638)</h3>
-            <button class="expando-toggle" aria-label="Toggle details"></button>
-          </header>
-          <div class="expando-body">
-            <p>Repro chain, request samples, logs, and mitigations.</p>
-            <div class="tags"><span>Linux</span><span>HTTP</span><span>RCE</span></div>
-          </div>
-        </article>
-
-        <article class="expando-card reveal" data-expando>
-          <header class="expando-head">
-            <h3>PwnKit (CVE-2021-4034)</h3>
-            <button class="expando-toggle" aria-label="Toggle details"></button>
-          </header>
-          <div class="expando-body">
-            <p>Local privilege escalation lab with indicators and patch notes.</p>
-            <div class="tags"><span>Linux</span><span>LPE</span></div>
-          </div>
-        </article>
-
-        <article class="expando-card reveal" data-expando>
-          <header class="expando-head">
-            <h3>Dirty COW (CVE-2016-5195)</h3>
-            <button class="expando-toggle" aria-label="Toggle details"></button>
-          </header>
-          <div class="expando-body">
-            <p>Race condition repro; kernel/version matrix and detection notes.</p>
-            <div class="tags"><span>Linux</span><span>Kernel</span></div>
-          </div>
-        </article>
-
-        <article class="expando-card reveal" data-expando>
-          <header class="expando-head">
-            <h3>EDR Signal Deep-Dive</h3>
-            <button class="expando-toggle" aria-label="Toggle details"></button>
-          </header>
-          <div class="expando-body">
-            <p>SentinelOne event review and response paths on staged malware/PUAs.</p>
-            <div class="tags"><span>EDR</span><span>Windows</span></div>
-          </div>
-        </article>
-
-        <article class="expando-card reveal" data-expando>
-          <header class="expando-head">
-            <h3>Nessus → WSUS Patch Cycle</h3>
-            <button class="expando-toggle" aria-label="Toggle details"></button>
-          </header>
-          <div class="expando-body">
-            <p>Turn findings into action: schedule, validate, and verify remediations.</p>
-            <div class="tags"><span>Windows Server</span><span>Patching</span></div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <div class="container grid-3">
-      <div class="card list reveal">
-        <h3>Security</h3>
-        <ul>
-          <li>Nessus · SentinelOne · Duo MFA</li>
-          <li>Wireshark · FTK Imager · Autopsy · Volatility</li>
-        </ul>
-      </div>
-      <div class="card list reveal">
-        <h3>Systems</h3>
-        <ul>
-          <li>Windows Server 2008–2022 · AD · GPO</li>
-          <li>Microsoft 365 / Exchange Online · VMware vSphere</li>
-        </ul>
-      </div>
-      <div class="card list reveal">
-        <h3>Build & Script</h3>
-        <ul>
-          <li>PowerShell · Python · SQL · Java · C/C++</li>
-          <li>Tools: Nmap · Metasploit · Hashcat</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container contact-wrap">
-      <div class="reveal">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:christopher@carbonehq.com">christopher@carbonehq.com</a></p>
-        <p>Alternate: <a href="mailto:ccarb4@unh.newhaven.edu">ccarb4@unh.newhaven.edu</a></p>
-        <p>LinkedIn: <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/christopher-carbone-333439245/">linkedin.com/in/christopher-carbone-333439245</a></p>
-        <p>Handshake: <a target="_blank" rel="noreferrer" href="https://newhaven.joinhandshake.com/profiles/carbone">newhaven.joinhandshake.com/profiles/carbone</a></p>
-        <p>GitHub: <a target="_blank" rel="noreferrer" href="https://github.com/chriscrbone">github.com/chriscrbone</a></p>
-      </div>
-
-      <aside class="contact-card reveal" aria-label="Availability">
-        <h3>Availability</h3>
-        <p>Open to internships and part-time roles in security or systems.</p>
-        <a class="btn primary" href="mailto:christopher@carbonehq.com">Email me</a>
-      </aside>
-    </div>
-  </section>
-
+  <!-- Global Footer -->
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Christopher Carbone</p>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand compact">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16">
+              <circle cx="12" cy="12" r="10" class="mark-ring"/>
+              <path d="M12 7v10M7 12h10" class="mark-plus"/>
+            </svg>
+          </span>
+          <span class="brand-text">Carbone <strong class="hq">HQ</strong></span>
+        </div>
+        <p class="foot-copy">© <span id="year"></span> Christopher N. Carbone. All rights reserved.</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul class="foot-links">
+          <li><a href="mailto:christopher@carbonehq.com">christopher@carbonehq.com</a></li>
+          <li><a href="mailto:Christopher@carbonehq.com">Request resume</a></li>
+          <li><a href="https://linkedin.com/in/christopher-carbone-333439245" target="_blank" rel="noreferrer">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Site</h3>
+        <ul class="foot-links">
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 
-  <!-- Reveal animations, smooth scroll, and expanding cards -->
-  <script>
-    // Reveal on scroll
-    const els = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-      for (const e of entries) {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      }
-    }, { threshold: 0.15 });
-    els.forEach(el => io.observe(el));
-
-    // Smooth anchor scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const id = a.getAttribute('href');
-        const target = document.querySelector(id);
-        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', id); }
-      });
-    });
-
-    // Expandable cards (Projects & Labs). One open at a time within each grid.
-    document.querySelectorAll('.expando-grid').forEach(grid => {
-      grid.querySelectorAll('[data-expando]').forEach(card => {
-        const head = card.querySelector('.expando-head');
-        const btn  = card.querySelector('.expando-toggle');
-
-        const toggle = () => {
-          const opening = !card.classList.contains('is-open');
-          grid.querySelectorAll('.expando-card.is-open').forEach(c => c.classList.remove('is-open'));
-          if (opening) card.classList.add('is-open');
-        };
-
-        head.addEventListener('click', (e) => {
-          if (e.target !== btn) toggle();
-        });
-        btn.addEventListener('click', (e) => { e.stopPropagation(); toggle(); });
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
-

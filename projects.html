@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Christopher Carbone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <a class="brand" href="index.html" aria-label="CarboneHQ home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="10" class="mark-ring"/><path d="M12 7v10M7 12h10" class="mark-plus"/></svg>
+        </span>
+        <span class="brand-text">Carbone <strong class="hq">HQ</strong></span>
+      </a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a class="active" href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" style="padding:34px 0 40px">
+  <section class="panel">
+    <h1>Projects</h1>
+    <p style="color:#c7ccd6;margin:.2rem 0 1rem">Click a bubble to expand. Click again to collapse.</p>
+
+    <div class="bubble-grid">
+      <!-- Bubble 1 -->
+      <article class="project-bubble" tabindex="0" aria-expanded="false">
+        <h3 class="bubble-title">Capstone — Fortinet SOC</h3>
+        <div class="bubble-body">
+          <p>
+            Built a Fortinet-based SOC lab simulating adversary traffic, alerts, and IR workflows.
+            Focused on detections, log quality, and response runbooks. Wrote after-action reports and gap lists.
+          </p>
+          <ul class="bubble-points">
+            <li>FortiGate · FortiAnalyzer · Syslog</li>
+            <li>Simulated attack traffic &amp; noisy baselines</li>
+            <li>Documented playbooks and metrics</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Bubble 2 -->
+      <article class="project-bubble" tabindex="0" aria-expanded="false">
+        <h3 class="bubble-title">CTF — 11/553 @ CTF@CIT</h3>
+        <div class="bubble-body">
+          <p>
+            Regular CTFs across forensics, web, rev, and crypto. Emphasis on quick notes and reusable one-liners.
+          </p>
+          <ul class="bubble-points">
+            <li>Wireshark · Volatility · Python</li>
+            <li>Hash cracking &amp; protocol puzzles</li>
+            <li>Repeatable tooling &amp; checklists</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Bubble 3 -->
+      <article class="project-bubble" tabindex="0" aria-expanded="false">
+        <h3 class="bubble-title">Automation — Patch &amp; Health</h3>
+        <div class="bubble-body">
+          <p>
+            PowerShell utilities for pre-checks, patch window actions, and post-patch validation with logs for audit.
+          </p>
+          <ul class="bubble-points">
+            <li>Services/state verification</li>
+            <li>Event &amp; version capture</li>
+            <li>Reduced manual effort &amp; drift</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand compact">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="10" class="mark-ring"/><path d="M12 7v10M7 12h10" class="mark-plus"/></svg>
+          </span>
+          <span class="brand-text">Carbone <strong class="hq">HQ</strong></span>
+        </div>
+        <p class="foot-copy">© <span id="year"></span> Christopher N. Carbone.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul class="foot-links">
+          <li><a href="mailto:christopher@carbonehq.com">christopher@carbonehq.com</a></li>
+          <li><a href="mailto:Christopher@carbonehq.com">Request resume</a></li>
+          <li><a href="https://linkedin.com/in/christopher-carbone-333439245" target="_blank" rel="noreferrer">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul class="foot-links">
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="experience.html">Experience</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
